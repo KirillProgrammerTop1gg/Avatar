@@ -19,7 +19,11 @@
         align-items: center;
         color: $form-color;
         border-radius: 50%;
+        border: 0;
         transition: all cubic-bezier(.11,.2,.55,1.27) 0.2s;
+        &:hover{
+            background-color: $close-hover;
+        }
     }
     &__video{
         margin-top: 40px;

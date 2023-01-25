@@ -218,7 +218,11 @@ ul {
   align-items: center;
   color: #000;
   border-radius: 50%;
+  border: 0;
   transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.2s;
+}
+.video-section__close:hover {
+  background-color: #807e7e;
 }
 .video-section__video {
   margin-top: 40px;
