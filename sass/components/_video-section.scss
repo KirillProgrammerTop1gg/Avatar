@@ -1,0 +1,41 @@
+.video-section{
+    padding: 40px;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $form-background-color;
+    &__title{
+        @include text-style(700, 32px, 1.15, 'Inter', center);
+    }
+    &__close{
+        position: absolute;
+        @include flex;
+        top: 8px;
+        right: 8px;
+        @include size-of-box(30px, 30px);
+        @include flex(center);
+        align-items: center;
+        color: $form-color;
+        border-radius: 50%;
+        transition: all cubic-bezier(.11,.2,.55,1.27) 0.2s;
+    }
+    &__video{
+        margin-top: 40px;
+    }
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include size-of-box(100%, 100%);
+    background: $overlay-background;
+    z-index: 2;
+    transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;
+}
+.overlay.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;
+}

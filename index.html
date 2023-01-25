@@ -58,7 +58,7 @@
             <img src="./img/quote-logo.png" alt="Логотип з орлем" class="quote-section__img" height="120">
         </section>
         <section class="trailer-section">
-            <button class="trailer-section__but">Дивитись трейлер</button>
+            <button class="trailer-section__but" data-open-modal>Дивитись трейлер</button>
         </section>
         <section class="quote-section">
             <h1 class="quote-section__title">
@@ -111,7 +111,41 @@
             <p class="quote-section__text">Нейтірі</p>
             <img src="./img/quote-logo.png" alt="Логотип з орлем" class="quote-section__img" height="120">
         </section>
+        <div class="overlay is-hidden" data-backdrop>
+            <section class="video-section">
+                <h2 class="video-section__title">Трейлер</h2>
+                <button class="video-section__close" type="button" data-close-modal>X</button>
+                <video class="video-section__video" src="./video/avatarTrailer.mp4" controls></video>
+            </section>
+        </div>
     </main>
     <footer class="footer-section"></footer>
+    <script>
+        const refs = {
+          openModalBtn: document.querySelector("[data-open-modal]"),
+          closeModalBtn: document.querySelector("[data-close-modal]"),
+          backdrop: document.querySelector("[data-backdrop]"),
+        };
+  
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+  
+        refs.backdrop.addEventListener("click", logBackdropClick);
+  
+        function toggleModal() {
+          refs.backdrop.classList.toggle("is-hidden");
+          
+          if(document.body.style.overflow == 'hidden'){
+            document.body.style.overflow = 'visible';
+          }
+          else{
+            document.body.style.overflow = 'hidden';
+          }
+        }
+  
+        function logBackdropClick() {
+          console.log("Це клік в бекдроп");
+        }
+    </script>
 </body>
 </html>
