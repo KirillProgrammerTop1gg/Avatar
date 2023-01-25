@@ -1,0 +1,16 @@
+.quote-section{
+    padding: 73px 0 10px;
+    &__title{
+        @include text-style(400, 36px, 1.22, 'Inter', center);
+        color: $quote-title-color;
+    }
+    &__text{
+        @include text-style(400, 24px, 1.2, 'Inter', center);
+        color: $quote-text-color;
+        margin-top: 16px;
+    }
+    &__img{
+        margin: 8px auto 0;
+        display: block;
+    }
+}

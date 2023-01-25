@@ -1,0 +1,16 @@
+.trailer-section{
+    padding: 310px 0;
+    background: url('../img/trailer-fon.jpg');
+    background-size: cover;
+}
+.trailer-section__but{
+    margin: 0 auto;
+    display: block;
+    @include size-of-box(260px, 80px);
+    background: $but-background-color;
+    border: 3px solid $but-brd-and-color;
+    border-radius: 45px 0px;
+    padding: 0 30px;
+    @include text-style(400, 24px, 1.25, 'Headland One', center);
+    color: $but-brd-and-color;
+}

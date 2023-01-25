@@ -1,0 +1,16 @@
+@mixin size-of-box($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin flex($justify-content: baseline, $flex-wrap: nowrap){
+    display: flex;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+}
+@mixin text-style($font-weight, $font-size, $line-height, $font-family, $text-align){
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-family;
+    text-align: $text-align;
+}
