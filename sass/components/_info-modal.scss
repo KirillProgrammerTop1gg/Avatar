@@ -1,39 +1,44 @@
-.video-section{
-    padding: 40px;
+.info-modal{
+    padding: 51px 112px 172px;
     position: absolute;
     z-index: 3;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: $form-background-color;
+    background: url("../../img/info-fon.png");
+    background-position: center center;
+    background-size: cover;
     border-radius: 10px;
     box-shadow: $modal-shadow;
     &__title{
-        @include text-style(700, 32px, 1.15, 'Inter', center);
-        color: $main-modal-color;
+        @include text-style(400, 24px, 1.25, 'Inter', center);
+        color: $info-color;
+    }
+    &__text{
+        margin-top: 80px;
+        @include text-style(400, 24px, 1.25, 'Inter', center);
+        color: $info-color;
     }
     &__close{
         position: absolute;
         @include flex;
         top: 8px;
         right: 8px;
+        background-color: transparent;
         @include size-of-box(30px, 30px);
         @include flex(center);
         align-items: center;
-        fill: $main-modal-color;
+        fill: $info-color;
         border-radius: 50%;
         border: 0;
         transition: all cubic-bezier(.11,.2,.55,1.27) 0.2s;
         &:hover{
-            background-color: $close-hover;
+            background-color: transparent;
             transform: scale(1.1) rotate(360deg);
         }
     }
-    &__video{
-        margin-top: 40px;
-    }
 }
-.overlay{
+.overlay-info{
     position: fixed;
     top: 0;
     left: 0;
@@ -42,7 +47,7 @@
     z-index: 2;
     transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;
 }
-.overlay.is-hidden{
+.overlay-info.is-hiddenInfo{
     opacity: 0;
     pointer-events: none;
     transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;

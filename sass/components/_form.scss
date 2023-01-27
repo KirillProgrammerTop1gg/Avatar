@@ -11,7 +11,7 @@
     border-radius: 10px;
     &__close{
         background-color: transparent;
-        fill: $main-form-color;
+        fill: $main-modal-color;
         border: 0;
         position: absolute;
         @include flex;
@@ -30,19 +30,19 @@
         border: 3px solid $but-brd-and-color;
         border-radius: 45px 0px;
         padding: 0 30px;
-        @include text-style(400, 24px, 1.25, 'Headland One', center);
+        @include text-style(400, 24px, 1.25, 'Inter', center);
         color: $but-brd-and-color;
         margin: 40px auto 0;
     }
     &__label{
         @include text-style(400, 24px, 1.21, 'Inter', start);
         display: block;
-        color: $main-form-color;
+        color: $main-modal-color;
     }
     &__input{
         @include size-of-box(440px, 40px);
         background: $form-input;
-        border: 2px solid $main-form-color;
+        border: 2px solid $main-modal-color;
         padding: 10px;
     }
     &__field:nth-child(3){

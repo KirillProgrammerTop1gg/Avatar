@@ -14,6 +14,10 @@ ul {
   margin: 0 auto;
 }
 
+.arr-right {
+  transform: rotate(180deg);
+}
+
 .hero-section > .container {
   display: flex;
   justify-content: baseline;
@@ -43,6 +47,7 @@ ul {
 }
 .hero-section__arrow {
   margin-left: 40px;
+  fill: #FFF;
 }
 .hero-section__but {
   margin-top: 40px;
@@ -58,7 +63,7 @@ ul {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.25;
-  font-family: "Headland One";
+  font-family: "Inter";
   text-align: center;
   color: #26C7EA;
 }
@@ -171,7 +176,7 @@ input:checked + .slider:before {
   font-weight: 400;
   font-size: 32px;
   line-height: 1.25;
-  font-family: "Headland One";
+  font-family: "Inter";
   text-align: center;
   color: #141414;
 }
@@ -179,19 +184,20 @@ input:checked + .slider:before {
   font-weight: 400;
   font-size: 24px;
   line-height: 1;
-  font-family: "Headland One";
+  font-family: "Inter";
   text-align: center;
   color: #141414;
 }
 .lang-section__img {
   display: block;
   margin: 40px auto 0;
+  fill: #09354E;
 }
 .lang-section__explanation {
   font-weight: 400;
   font-size: 24px;
   line-height: 1;
-  font-family: "Headland One";
+  font-family: "Inter";
   text-align: center;
   color: #000;
   margin-top: 40px;
@@ -199,8 +205,13 @@ input:checked + .slider:before {
 
 .quote-section {
   padding: 73px 0 10px;
+  display: table;
+  margin: 0 auto;
 }
 .quote-section__title {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
   font-weight: 400;
   font-size: 36px;
   line-height: 1.22;
@@ -220,6 +231,7 @@ input:checked + .slider:before {
 .quote-section__img {
   margin: 8px auto 0;
   display: block;
+  fill: #09354E;
 }
 
 .trailer-section {
@@ -240,7 +252,7 @@ input:checked + .slider:before {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.25;
-  font-family: "Headland One";
+  font-family: "Inter";
   text-align: center;
   color: #26C7EA;
 }
@@ -262,6 +274,7 @@ input:checked + .slider:before {
   line-height: 1.15;
   font-family: "Inter";
   text-align: center;
+  color: #0B0E66;
 }
 .video-section__close {
   position: absolute;
@@ -276,13 +289,14 @@ input:checked + .slider:before {
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
-  color: #000;
+  fill: #0B0E66;
   border-radius: 50%;
   border: 0;
   transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.2s;
 }
 .video-section__close:hover {
-  background-color: #807e7e;
+  background-color: #8a8988;
+  transform: scale(1.1) rotate(360deg);
 }
 .video-section__video {
   margin-top: 40px;
@@ -347,7 +361,7 @@ input:checked + .slider:before {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.25;
-  font-family: "Headland One";
+  font-family: "Inter";
   text-align: center;
   color: #26C7EA;
   margin: 40px auto 0;
@@ -387,6 +401,86 @@ input:checked + .slider:before {
   opacity: 0;
   pointer-events: none;
   transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.4s;
+}
+
+.info-modal {
+  padding: 51px 112px 172px;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../../img/info-fon.png");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 10px -10px 8px 0px rgb(89, 89, 89);
+}
+.info-modal__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25;
+  font-family: "Inter";
+  text-align: center;
+  color: #FFF;
+}
+.info-modal__text {
+  margin-top: 80px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25;
+  font-family: "Inter";
+  text-align: center;
+  color: #FFF;
+}
+.info-modal__close {
+  position: absolute;
+  display: flex;
+  justify-content: baseline;
+  flex-wrap: nowrap;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  fill: #FFF;
+  border-radius: 50%;
+  border: 0;
+  transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.2s;
+}
+.info-modal__close:hover {
+  background-color: transparent;
+  transform: scale(1.1) rotate(360deg);
+}
+
+.overlay-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.4s;
+}
+
+.overlay-info.is-hiddenInfo {
+  opacity: 0;
+  pointer-events: none;
+  transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.4s;
+}
+
+.container {
+  width: 1089px;
+  margin: 0 auto;
+}
+
+.arr-right {
+  transform: rotate(180deg);
 }
 
 .footer-section {

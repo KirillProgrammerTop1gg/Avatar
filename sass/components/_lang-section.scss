@@ -16,19 +16,20 @@
         margin-top: 24px;
     }
     &__title{
-        @include text-style(400, 32px, 1.25, 'Headland One', center);
+        @include text-style(400, 32px, 1.25, 'Inter', center);
         color: $lang-color;
     }
     &__text{
-        @include text-style(400, 24px, 1, 'Headland One', center);
+        @include text-style(400, 24px, 1, 'Inter', center);
         color: $lang-color;
     }
     &__img{
         display: block;
         margin: 40px auto 0;
+        fill: $svg-color;
     }
     &__explanation{
-        @include text-style(400, 24px, 1, 'Headland One', center);
+        @include text-style(400, 24px, 1, 'Inter', center);
         color: $lang-explanation-color;
         margin-top: 40px;
     }

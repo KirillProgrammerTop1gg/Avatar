@@ -1,6 +1,9 @@
 .quote-section{
     padding: 73px 0 10px;
+    display: table;
+    margin: 0 auto;
     &__title{
+        @include flex(center);
         @include text-style(400, 36px, 1.22, 'Inter', center);
         color: $quote-title-color;
     }
@@ -12,5 +15,6 @@
     &__img{
         margin: 8px auto 0;
         display: block;
+        fill: $svg-color;
     }
 }

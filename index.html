@@ -9,20 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Headland+One&family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="./styles/main.min.css">
 </head>
 <body>
     <main class="main-section">
         <section class="hero-section">
             <div class="container">
-                <div class="hero-section__column1">
+                <div class="hero-section__column1" data-aos="fade-right"  data-aos-duration="2000">
                     <img src="./img/main-logo.png" alt="Логотип" class="hero-section__logo" height="100">
                     <p class="hero-section__text">Oe perlltxe hu tsamsiyu! Ngari hu Eywa salew tirea,  tokx 'ì'awn slu Na'viyä haì. Säwem nìayoeng!</p>
-                    <img src="./img/main-arr.png" alt="Стрілка" class="hero-section__arrow" height="40">
+                    <svg height="40" class="hero-section__arrow">
+                        <use href="./img/symbol-defs.svg#icon-arr"></use>
+                    </svg>
                     <p class="hero-section__description">Хоробрий воїне, звертаюсь до тебе! Твій дух йде з Ейвою,  твоє тіло залишається,  щоб стати частиною Народу. Борись разом з нами!</p>
                     <button class="hero-section__but" data-open-form-modal>Приєднатися до клану</button>
                 </div>
-                <div class="hero-section__column2">
+                <div class="hero-section__column2" data-aos="fade-left"  data-aos-duration="2000">
                     <div class="hero-section__switch">
                         ENG
                         <label class="switch">
@@ -59,71 +63,93 @@
                 </div>
             </div>
         </section>
-        <section class="quote-section">
+        <section class="quote-section" data-aos="zoom-in-up" data-aos-duration="1300">
             <h1 class="quote-section__title">
                 “БАГАТО ЛЮДЕЙ З НЕБА ПРИЙДЕ. ВОНИ <br> ПРИЙДУТЬ, ЯК ГРОЗА, ЯКА НІКОЛИ НЕ ЗАКІНЧУЄТЬСЯ.”
             </h1>
             <p class="quote-section__text">Джейк Саллі</p>
-            <img src="./img/quote-logo.png" alt="Логотип з орлем" class="quote-section__img" height="120">
+            <svg class="quote-section__img" height="120">
+                <use href="./img/symbol-defs.svg#icon-orel"></use>
+            </svg>
         </section>
         <section class="trailer-section">
-            <button class="trailer-section__but" data-open-modal>Дивитись трейлер</button>
+            <button class="trailer-section__but" data-aos="flip-up" data-aos-duration="600" data-open-modal>Дивитись трейлер</button>
         </section>
-        <section class="quote-section">
+        <section class="quote-section" data-aos="flip-left" data-aos-duration="1300">
             <h1 class="quote-section__title">
                 “ВСЯ ЕНЕРГІЯ ЛИШЕ ЗАПОЗИЧЕНА, ОДНОГО ДНЯ <br> ЇЇ ДОВЕДЕТЬСЯ ПОВЕРНУТИ.”
             </h1>
             <p class="quote-section__text">Джейк Саллі</p>
-            <img src="./img/quote-logo.png" alt="Логотип з орлем" class="quote-section__img" height="120" height="120">
+            <svg class="quote-section__img" height="120">
+                <use href="./img/symbol-defs.svg#icon-orel"></use>
+            </svg>
         </section>
         <section class="lang-section">
             <div class="container">
-                <h2 class="lang-section__title">Вчимо мову На’ві</h2>
+                <h2 class="lang-section__title" data-aos="fade-down" data-aos-duration="750">Вчимо мову На’ві</h2>
                 <ul class="lang-section__list">
-                    <li class="lang-section__item">
+                    <li class="lang-section__item" data-aos="fade-left" data-aos-duration="1000">
                         <p class="lang-section__text">Привіт</p>
-                        <img src="./img/arr-left.png" alt="Стрілка вліво" class="lang-section__img" height="40">
+                        <svg height="40" class="lang-section__img">
+                            <use href="./img/symbol-defs.svg#icon-arr"></use>
+                        </svg>
                         <p class="lang-section__explanation">Kaltxì</p>
                     </li>
-                    <li class="lang-section__item">
+                    <li class="lang-section__item" data-aos="zoom-in" data-aos-duration="1000">
                         <p class="lang-section__text">Як справи?</p>
-                        <img src="./img/quote-logo.png" alt="Логотип" class="lang-section__img" height="40">
+                        <svg class="lang-section__img" height="40">
+                            <use href="./img/symbol-defs.svg#icon-orel"></use>
+                        </svg>
                         <p class="lang-section__explanation">Ngaru lu fpom srak?</p>
                     </li>
-                    <li class="lang-section__item">
+                    <li class="lang-section__item" data-aos="fade-right" data-aos-duration="1000">
                         <p class="lang-section__text">Все добре</p>
-                        <img src="./img/arr-right.png" alt="Стрілка вправо" class="lang-section__img" height="40" height="40">
+                        <svg height="40" class="lang-section__img arr-right">
+                            <use href="./img/symbol-defs.svg#icon-arr"></use>
+                        </svg>
                         <p class="lang-section__explanation">Lu fpom</p>
                     </li>
-                    <li class="lang-section__item">
+                    <li class="lang-section__item" data-aos="fade-left" data-aos-duration="1000">
                         <p class="lang-section__text">Дякую</p>
-                        <img src="./img/arr-left.png" alt="Стрілка вліво" class="lang-section__img" height="40" height="40">
+                        <svg height="40" class="lang-section__img">
+                            <use href="./img/symbol-defs.svg#icon-arr"></use>
+                        </svg>
                         <p class="lang-section__explanation">Irayo si </p>
                     </li>
-                    <li class="lang-section__item">
+                    <li class="lang-section__item" data-aos="zoom-in" data-aos-duration="1000">
                         <p class="lang-section__text">Я бачу тебе</p>
-                        <img src="./img/quote-logo.png" alt="Логотип" class="lang-section__img" height="40">
+                        <svg class="lang-section__img" height="40">
+                            <use href="./img/symbol-defs.svg#icon-orel"></use>
+                        </svg>
                         <p class="lang-section__explanation">Oel ngati kameie</p>
                     </li>
-                    <li class="lang-section__item">
+                    <li class="lang-section__item" data-aos="fade-right" data-aos-duration="1000">
                         <p class="lang-section__text">Слідуй за мною!</p>
-                        <img src="./img/arr-right.png" alt="Стрілка вправо" class="lang-section__img" height="40">
+                        <svg height="40" class="lang-section__img arr-right">
+                            <use href="./img/symbol-defs.svg#icon-arr"></use>
+                        </svg>
                         <p class="lang-section__explanation">Nong oet!</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="quote-section">
+        <section class="quote-section" data-aos="flip-left" data-aos-duration="1300">
             <h1 class="quote-section__title">
                 “НАША ВЕЛИКА МАТИ НЕ СТАЄ НА ЯКУСЬ СТОРОНУ, <br> ВОНА ЗАХИЩАЄ ЛИШЕ ЖИТТЄВИЙ БАЛАНС.”
             </h1>
             <p class="quote-section__text">Нейтірі</p>
-            <img src="./img/quote-logo.png" alt="Логотип з орлем" class="quote-section__img" height="120">
+            <svg class="quote-section__img" height="120">
+                <use href="./img/symbol-defs.svg#icon-orel"></use>
+            </svg>
         </section>
         <div class="overlay is-hidden" data-backdrop>
             <section class="video-section">
                 <h2 class="video-section__title">Трейлер</h2>
-                <button class="video-section__close" type="button" data-close-modal>X</button>
+                <button class="video-section__close" type="button" data-close-modal>
+                    <svg class="video__svg" width="14" height="14">
+                        <use href="./img/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
                 <iframe class="video-section__video" width="640" height="360" src="https://www.youtube.com/embed/CM79GTEm2ps" title="AVATAR Trailer (2009)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </section>
         </div>
@@ -142,12 +168,26 @@
                     <label for="Name" class="form__label">Email</label>
                     <input type="email" class="form__input" id="Email" required>
                 </div>
-                <button class="form__but">Приєднатися до клану</button>
+                <button class="form__but" data-open-info-modal>Приєднатися до клану</button>
               </form>
+        </div>
+        <div class="overlay-info is-hiddenInfo" data-info-backdrop>
+            <section class="info-modal">
+                <button type="button" class="info-modal__close" data-close-info-modal>
+                    <svg class="info-modal__svg" width="14" height="14">
+                        <use href="./img/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <h2 class="info-modal__title">Вітаємо у нашому клані</h2>
+                <p class="info-modal__text">Твій Банші вже в дорозі. <br> Скоро побачимось на Пандорі.</p>
+            </section>
         </div>
     </main>
     <footer class="footer-section"></footer>
     <script>
+        // інітим анімації
+        AOS.init();
+        // константи
         const refs = {
           openModalBtn: document.querySelector("[data-open-modal]"),
           closeModalBtn: document.querySelector("[data-close-modal]"),
@@ -158,7 +198,13 @@
           closeModalBtnForm: document.querySelector("[data-close-form-modal]"),
           backdropForm: document.querySelector("[data-form-backdrop]"),
         };
-  
+        const refsInfo = {
+          openModalBtnInfo: document.querySelector("[data-open-info-modal]"),
+          closeModalBtnInfo: document.querySelector("[data-close-info-modal]"),
+          backdropInfo: document.querySelector("[data-info-backdrop]"),
+        };
+        
+        // код для відео модалки
         refs.openModalBtn.addEventListener("click", toggleModal);
         refs.closeModalBtn.addEventListener("click", toggleModal);
   
@@ -179,6 +225,7 @@
           console.log("Це клік в бекдроп");
         }
 
+        // код для форми модалки
         refsForm.openModalBtnForm.addEventListener("click", toggleModalForm);
         refsForm.closeModalBtnForm.addEventListener("click", toggleModalForm);
   
@@ -196,6 +243,28 @@
         }
   
         function logBackdropClickForm() {
+          console.log("Це клік в бекдроп");
+        }
+
+        // код для інфо модалки
+        refsInfo.openModalBtnInfo.addEventListener("click", toggleModalInfo);
+        refsInfo.closeModalBtnInfo.addEventListener("click", toggleModalInfo);
+  
+        refsInfo.backdropInfo.addEventListener("click", logBackdropClickInfo);
+
+        function toggleModalInfo() {
+          refsInfo.backdropInfo.classList.toggle("is-hiddenInfo");
+          refsForm.backdropForm.classList.add("is-hiddenForm");
+
+          if(document.body.style.overflow == 'hidden'){
+            document.body.style.overflow = 'visible';
+          }
+          else{
+            document.body.style.overflow = 'hidden';
+          }
+        }
+  
+        function logBackdropClickInfo() {
           console.log("Це клік в бекдроп");
         }
     </script>

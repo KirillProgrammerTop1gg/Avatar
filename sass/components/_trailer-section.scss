@@ -11,6 +11,6 @@
     border: 3px solid $but-brd-and-color;
     border-radius: 45px 0px;
     padding: 0 30px;
-    @include text-style(400, 24px, 1.25, 'Headland One', center);
+    @include text-style(400, 24px, 1.25, 'Inter', center);
     color: $but-brd-and-color;
 }
