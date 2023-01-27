@@ -75,7 +75,7 @@ ul {
   height: 600px;
   margin-top: 52px;
   padding: 124px 59px 0 629px;
-  background: url("../../img/main-people.png");
+  background: url("../img/main-people.png");
 }
 .hero-section__item {
   margin-top: 26px;
@@ -326,7 +326,7 @@ input:checked + .slider:before {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url("../../img/form-fon.png");
+  background: url("../img/form-fon.png");
   background-size: cover;
   background-position: center center;
   border-radius: 10px;
@@ -410,7 +410,7 @@ input:checked + .slider:before {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url("../../img/info-fon.png");
+  background: url("../img/info-fon.png");
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
