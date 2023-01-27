@@ -247,23 +247,20 @@
         }
 
         // код для інфо модалки
-        refsInfo.openModalBtnInfo.addEventListener("click", toggleModalInfo);
-        refsInfo.closeModalBtnInfo.addEventListener("click", toggleModalInfo);
+        refsInfo.openModalBtnInfo.addEventListener("click", showModalInfo);
+        refsInfo.closeModalBtnInfo.addEventListener("click", hideModalInfo);
   
         refsInfo.backdropInfo.addEventListener("click", logBackdropClickInfo);
 
-        function toggleModalInfo() {
-          refsInfo.backdropInfo.classList.toggle("is-hiddenInfo");
-          refsForm.backdropForm.classList.add("is-hiddenForm");
-
-          if(document.body.style.overflow == 'hidden'){
-            document.body.style.overflow = 'visible';
-          }
-          else{
-            document.body.style.overflow = 'hidden';
-          }
+        function showModalInfo(){
+            refsInfo.backdropInfo.classList.remove("is-hiddenInfo");
+            refsForm.backdropForm.classList.add("is-hiddenForm");
         }
-  
+        function hideModalInfo(){
+            refsInfo.backdropInfo.classList.add("is-hiddenInfo");
+            document.body.style.overflow = 'visible';
+        }
+
         function logBackdropClickInfo() {
           console.log("Це клік в бекдроп");
         }
