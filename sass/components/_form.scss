@@ -1,0 +1,65 @@
+.form{
+    padding: 111px 80px 23px;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../../img/form-fon.png");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    &__close{
+        background-color: transparent;
+        fill: $main-form-color;
+        border: 0;
+        position: absolute;
+        @include flex;
+        top: 8px;
+        right: 8px;
+        @include size-of-box(30px, 30px);
+        @include flex(center);
+        align-items: center;
+        color: $form-color;
+        font-size: 20px;
+    }
+    &__but{
+        display: block;
+        @include size-of-box(260px, 80px);
+        background: $but-background-color;
+        border: 3px solid $but-brd-and-color;
+        border-radius: 45px 0px;
+        padding: 0 30px;
+        @include text-style(400, 24px, 1.25, 'Headland One', center);
+        color: $but-brd-and-color;
+        margin: 40px auto 0;
+    }
+    &__label{
+        @include text-style(400, 24px, 1.21, 'Inter', start);
+        display: block;
+        color: $main-form-color;
+    }
+    &__input{
+        @include size-of-box(440px, 40px);
+        background: $form-input;
+        border: 2px solid $main-form-color;
+        padding: 10px;
+    }
+    &__field:nth-child(3){
+        margin-top: 12px;
+    }
+}
+.overlay-form{
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include size-of-box(100%, 100%);
+    background: $overlay-background;
+    z-index: 2;
+    transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;
+}
+.overlay-form.is-hiddenForm{
+    opacity: 0;
+    pointer-events: none;
+    transition: all cubic-bezier(.11,.2,.55,1.27) 0.4s;
+}

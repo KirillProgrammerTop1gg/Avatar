@@ -5,6 +5,7 @@
     &__list{
         @include flex(space-between, wrap);
         @include size-of-box(1033px, auto);
+        margin: 47px auto 0;
     }
     &__item{
         background: $lang-item-bgc;

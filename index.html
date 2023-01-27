@@ -20,29 +20,38 @@
                     <p class="hero-section__text">Oe perlltxe hu tsamsiyu! Ngari hu Eywa salew tirea,  tokx 'ì'awn slu Na'viyä haì. Säwem nìayoeng!</p>
                     <img src="./img/main-arr.png" alt="Стрілка" class="hero-section__arrow" height="40">
                     <p class="hero-section__description">Хоробрий воїне, звертаюсь до тебе! Твій дух йде з Ейвою,  твоє тіло залишається,  щоб стати частиною Народу. Борись разом з нами!</p>
-                    <button class="hero-section__but">Приєднатися до клану</button>
+                    <button class="hero-section__but" data-open-form-modal>Приєднатися до клану</button>
                 </div>
                 <div class="hero-section__column2">
                     <div class="hero-section__switch">
                         ENG
-                        <img src="./img/main-switch.png" alt="Світч" class="hero-section__img" height="20">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
                         UA
                     </div>
                     <div class="hero-section__soc">
                         <ul class="hero-section__list">
                             <li class="hero-section__item">
                                 <a href="./" class="hero-section__link">
-                                    <img src="./img/main-insta.png" alt="Соцмережа 1" class="hero-section__socm" height="30">
+                                    <svg height="30" width="30" class="hero-section__icon">
+                                        <use href="./img/symbol-defs.svg#icon-inst"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li class="hero-section__item">
                                 <a href="./" class="hero-section__link">
-                                    <img src="./img/main-tw.png" alt="Соцмережа 2" class="hero-section__socm" height="30">
+                                    <svg height="30" width="30" class="hero-section__icon">
+                                        <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li class="hero-section__item">
                                 <a href="./" class="hero-section__link">
-                                    <img src="./img/main-yt.png" alt="Соцмережа 3" class="hero-section__socm" height="30">
+                                    <svg height="30" width="30" class="hero-section__icon">
+                                        <use href="./img/symbol-defs.svg#icon-youtube"></use>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
@@ -118,6 +127,24 @@
                 <iframe class="video-section__video" width="640" height="360" src="https://www.youtube.com/embed/CM79GTEm2ps" title="AVATAR Trailer (2009)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </section>
         </div>
+        <div class="overlay-form is-hiddenForm" data-form-backdrop>
+            <form class="form">
+                <button type="button" class="form__close" data-close-form-modal>
+                    <svg class="form__svg" width="14" height="14">
+                        <use href="./img/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="form__field">
+                    <label for="Name" class="form__label">Ім'я</label>
+                    <input type="text" class="form__input" id="Name" required>
+                </div>
+                <div class="form__field">
+                    <label for="Name" class="form__label">Email</label>
+                    <input type="email" class="form__input" id="Email" required>
+                </div>
+                <button class="form__but">Приєднатися до клану</button>
+              </form>
+        </div>
     </main>
     <footer class="footer-section"></footer>
     <script>
@@ -126,12 +153,17 @@
           closeModalBtn: document.querySelector("[data-close-modal]"),
           backdrop: document.querySelector("[data-backdrop]"),
         };
+        const refsForm = {
+          openModalBtnForm: document.querySelector("[data-open-form-modal]"),
+          closeModalBtnForm: document.querySelector("[data-close-form-modal]"),
+          backdropForm: document.querySelector("[data-form-backdrop]"),
+        };
   
         refs.openModalBtn.addEventListener("click", toggleModal);
         refs.closeModalBtn.addEventListener("click", toggleModal);
   
         refs.backdrop.addEventListener("click", logBackdropClick);
-  
+
         function toggleModal() {
           refs.backdrop.classList.toggle("is-hidden");
           
@@ -144,6 +176,26 @@
         }
   
         function logBackdropClick() {
+          console.log("Це клік в бекдроп");
+        }
+
+        refsForm.openModalBtnForm.addEventListener("click", toggleModalForm);
+        refsForm.closeModalBtnForm.addEventListener("click", toggleModalForm);
+  
+        refsForm.backdropForm.addEventListener("click", logBackdropClickForm);
+
+        function toggleModalForm() {
+          refsForm.backdropForm.classList.toggle("is-hiddenForm");
+          
+          if(document.body.style.overflow == 'hidden'){
+            document.body.style.overflow = 'visible';
+          }
+          else{
+            document.body.style.overflow = 'hidden';
+          }
+        }
+  
+        function logBackdropClickForm() {
           console.log("Це клік в бекдроп");
         }
     </script>

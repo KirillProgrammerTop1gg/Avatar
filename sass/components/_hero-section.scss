@@ -37,7 +37,7 @@
         height: 600px;
         margin-top: 52px;
         padding: 124px 59px 0 629px;
-        background: url('../img/main-people.png');
+        background: url('../../img/main-people.png');
     }
     &__item{
         margin-top: 26px;
@@ -45,9 +45,59 @@
     &__item:first-child{
         margin-top: 0;
     }
+    &__icon{
+        fill: $hero-color;
+        transition: all ease-in-out 0.2s;
+        &:hover{
+            fill: $hero-active;
+        }
+    }
     &__switch{
         @include text-style(400, 20px, 1.25, 'Hammersmith One', center);
         color: $text-color;
         padding-left: 500px;
+        @include flex(center);
+        align-items: center;
     }
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 10px;
+}
+.switch input {display:none;}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round:before{
+    border-radius: 50%;
+}
+.slider{
+    outline: 2px solid $hero-color;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $hero-color;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }

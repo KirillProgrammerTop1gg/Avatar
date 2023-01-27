@@ -6,6 +6,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     background: $form-background-color;
+    border-radius: 10px;
+    box-shadow: $modal-shadow;
     &__title{
         @include text-style(700, 32px, 1.15, 'Inter', center);
     }

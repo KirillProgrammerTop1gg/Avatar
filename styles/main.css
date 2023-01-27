@@ -70,13 +70,20 @@ ul {
   height: 600px;
   margin-top: 52px;
   padding: 124px 59px 0 629px;
-  background: url("../img/main-people.png");
+  background: url("../../img/main-people.png");
 }
 .hero-section__item {
   margin-top: 26px;
 }
 .hero-section__item:first-child {
   margin-top: 0;
+}
+.hero-section__icon {
+  fill: #FFF;
+  transition: all ease-in-out 0.2s;
+}
+.hero-section__icon:hover {
+  fill: #26C7EA;
 }
 .hero-section__switch {
   font-weight: 400;
@@ -86,6 +93,56 @@ ul {
   text-align: center;
   color: #FFF;
   padding-left: 500px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 10px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider {
+  outline: 2px solid #FFF;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #FFF;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 .lang-section {
@@ -99,6 +156,7 @@ ul {
   flex-wrap: wrap;
   width: 1033px;
   height: auto;
+  margin: 47px auto 0;
 }
 .lang-section__item {
   background: rgba(255, 255, 255, 0.7);
@@ -195,6 +253,8 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   background: #FFF;
+  border-radius: 10px;
+  box-shadow: 10px -10px 8px 0px rgb(89, 89, 89);
 }
 .video-section__title {
   font-weight: 700;
@@ -240,6 +300,90 @@ ul {
 }
 
 .overlay.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.4s;
+}
+
+.form {
+  padding: 111px 80px 23px;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../../img/form-fon.png");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+}
+.form__close {
+  background-color: transparent;
+  fill: #0B0E66;
+  border: 0;
+  position: absolute;
+  display: flex;
+  justify-content: baseline;
+  flex-wrap: nowrap;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #000;
+  font-size: 20px;
+}
+.form__but {
+  display: block;
+  width: 260px;
+  height: 80px;
+  background: #0B0E66;
+  border: 3px solid #26C7EA;
+  border-radius: 45px 0px;
+  padding: 0 30px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25;
+  font-family: "Headland One";
+  text-align: center;
+  color: #26C7EA;
+  margin: 40px auto 0;
+}
+.form__label {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.21;
+  font-family: "Inter";
+  text-align: start;
+  display: block;
+  color: #0B0E66;
+}
+.form__input {
+  width: 440px;
+  height: 40px;
+  background: #F2EAEA;
+  border: 2px solid #0B0E66;
+  padding: 10px;
+}
+.form__field:nth-child(3) {
+  margin-top: 12px;
+}
+
+.overlay-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.4s;
+}
+
+.overlay-form.is-hiddenForm {
   opacity: 0;
   pointer-events: none;
   transition: all cubic-bezier(0.11, 0.2, 0.55, 1.27) 0.4s;
