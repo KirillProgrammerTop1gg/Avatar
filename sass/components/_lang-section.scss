@@ -4,12 +4,22 @@
     background-size: cover;
     &__list{
         @include flex(space-between, wrap);
-        @include size-of-box(1033px, auto);
         margin: 47px auto 0;
+        @media screen and (min-width: 768px) {
+            @include size-of-box(748px, auto);
+        }
+        @media screen and (min-width: 1170px) {
+            @include size-of-box(1033px, auto);
+        }
     }
     &__item{
         background: $lang-item-bgc;
-        @include size-of-box(320px, 240px);
+        @media screen and (min-width: 768px) {
+            @include size-of-box(240px, 240px);
+        }
+        @media screen and (min-width: 1170px) {
+            @include size-of-box(320px, 240px);
+        }
         padding: 36px 0;
     }
     &__item:nth-child(n+4){
@@ -26,6 +36,7 @@
     &__img{
         display: block;
         margin: 40px auto 0;
+        width: 100%;
         fill: $svg-color;
     }
     &__explanation{

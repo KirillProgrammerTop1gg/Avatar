@@ -10,7 +10,7 @@ ul {
 }
 
 .container {
-  width: 1089px;
+  max-width: 1089px;
   margin: 0 auto;
 }
 
@@ -31,6 +31,16 @@ ul {
   justify-content: baseline;
   flex-wrap: nowrap;
   padding-top: 25px;
+}
+@media screen and (min-width: 768px) {
+  .hero-section__column1 {
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .hero-section__column1 {
+    margin-left: 0;
+  }
 }
 .hero-section__text {
   margin-top: 149px;
@@ -74,11 +84,20 @@ ul {
 .hero-section__soc {
   height: 600px;
   margin-top: 52px;
-  padding: 124px 59px 0 629px;
   background: url("../img/main-people.png");
 }
-.hero-section__item {
-  margin-top: 26px;
+@media screen and (min-width: 768px) {
+  .hero-section__soc {
+    margin-left: -300px;
+    padding: 0;
+    min-width: 100%;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .hero-section__soc {
+    margin-left: 0;
+    padding: 124px 59px 0 629px;
+  }
 }
 .hero-section__item:first-child {
   margin-top: 0;
@@ -159,15 +178,35 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 1033px;
-  height: auto;
   margin: 47px auto 0;
+}
+@media screen and (min-width: 768px) {
+  .lang-section__list {
+    width: 748px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .lang-section__list {
+    width: 1033px;
+    height: auto;
+  }
 }
 .lang-section__item {
   background: rgba(255, 255, 255, 0.7);
-  width: 320px;
-  height: 240px;
   padding: 36px 0;
+}
+@media screen and (min-width: 768px) {
+  .lang-section__item {
+    width: 240px;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .lang-section__item {
+    width: 320px;
+    height: 240px;
+  }
 }
 .lang-section__item:nth-child(n+4) {
   margin-top: 24px;
@@ -191,6 +230,7 @@ input:checked + .slider:before {
 .lang-section__img {
   display: block;
   margin: 40px auto 0;
+  width: 100%;
   fill: #09354E;
 }
 .lang-section__explanation {
@@ -475,7 +515,7 @@ input:checked + .slider:before {
 }
 
 .container {
-  width: 1089px;
+  max-width: 1089px;
   margin: 0 auto;
 }
 

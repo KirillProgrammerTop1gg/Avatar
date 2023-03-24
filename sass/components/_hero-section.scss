@@ -6,6 +6,14 @@
     background-size: cover;
     @include flex;
     padding-top: 25px;
+    &__column1{
+        @media screen and (min-width: 768px) {
+            margin-left: 30px;
+        }
+        @media screen and (min-width: 1170px) {
+            margin-left: 0;
+        }
+    }
     &__text{
         margin-top: 149px;
     }
@@ -37,11 +45,16 @@
     &__soc{
         height: 600px;
         margin-top: 52px;
-        padding: 124px 59px 0 629px;
+        @media screen and (min-width: 768px) {
+            margin-left: -300px;
+            padding: 0;
+            min-width: 100%;
+        }
+        @media screen and (min-width: 1170px) {
+            margin-left: 0;
+            padding: 124px 59px 0 629px;
+        }
         background: url('../img/main-people.png');
-    }
-    &__item{
-        margin-top: 26px;
     }
     &__item:first-child{
         margin-top: 0;
