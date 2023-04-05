@@ -1,6 +1,11 @@
 .lang-section{
     padding: 32px 0 43px;
-    background: url('../img/lang-fon.webp');
+    background-image: url('../img/webps/lang-fon-@1x.webp');
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../img/webps/lang-fon-@2x.webp');
+    }
     background-size: cover;
     &__list{
         @include flex(space-between, wrap);

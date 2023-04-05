@@ -5,7 +5,12 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: url("../img/info-fon.png");
+    background-image: url('../img/webps/info-fon-@1x.webp');
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../img/webps/info-fon-@2x.webp');
+    }
     background-position: center center;
     background-size: cover;
     border-radius: 10px;

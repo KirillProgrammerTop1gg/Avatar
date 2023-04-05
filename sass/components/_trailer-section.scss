@@ -1,6 +1,11 @@
 .trailer-section{
     padding: 310px 0;
-    background: url('../img/trailer-fon.jpg');
+    background-image: url('../img/webps/trailer-fon-@1x.webp');
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../img/webps/trailer-fon-@2x.webp');
+    }
     background-size: cover;
 }
 .trailer-section__but{

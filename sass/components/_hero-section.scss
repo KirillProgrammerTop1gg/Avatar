@@ -54,7 +54,12 @@
             margin-left: 0;
             padding: 124px 59px 0 629px;
         }
-        background: url('../img/main-people.png');
+        background-image: url('../img/webps/main-person-@1x.webp');
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../img/webps/main-person-@2x.webp');
+        }
     }
     &__item:first-child{
         margin-top: 0;
