@@ -60,6 +60,8 @@
         (min-resolution: 2dppx) {
             background-image: url('../img/webps/main-person-@2x.webp');
         }
+        background-repeat: no-repeat;
+        background-size: contain;
     }
     &__item:first-child{
         margin-top: 0;
